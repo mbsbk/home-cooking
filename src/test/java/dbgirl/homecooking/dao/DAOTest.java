@@ -16,7 +16,7 @@ public class DAOTest extends BaseTest{
     private BookMapper bookMapper;
 
     @Test
-    public void TestInsert(){
+    public void TestConnected(){
         Book book = bookMapper.selectByPrimaryKey("-1");
 
         Assert.assertNull(book);
