@@ -27,4 +27,4 @@ target/
 
 .DS_Store
 
-mybatis-generator-config.xml
+*mybatis-generator-config.xml
