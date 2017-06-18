@@ -1,0 +1,52 @@
+@startuml
+
+class Context{
+    List<String> bookIds
+    Condition condition
+}
+
+interface IRecommenderService{
+   Book getBook(String userId)
+}
+
+class RecommenderService{
+   Book getBook(String userId)
+}
+
+class ChainManager{
+    List<Handler> getChain(Context)
+}
+
+abstract AbstractRecommender{
+    List<String> getBookSorted(Condition condition)
+}
+
+class ScoreRecommender{
+    List<String> getBookSorted(Condition condition)
+    obtainBooks(Context context)
+}
+class NutritionBalancedRecommender{
+    List<String> getBookSorted(Condition condition)
+    obtainBooks(Context context)
+}
+abstract Handler{
+    protected Handler successor
+    obtainBooks(Context context)
+}
+
+class FrequencyHandler{
+    obtainBooks(Context context)
+}
+class PeriodHandler{
+    obtainBooks(Context context)
+}
+AbstractRecommender <|-- ScoreRecommender
+AbstractRecommender <|-- NutritionBalancedRecommender
+Handler <|-- AbstractRecommender
+Handler <|-- FrequencyHandler
+Handler <|-- PeriodHandler
+IRecommenderService <|.. RecommenderService
+RecommenderService ..> ChainManager
+
+
+@enduml
