@@ -26,3 +26,5 @@ target/
 .idea/
 
 .DS_Store
+
+mybatis-generator-config.xml

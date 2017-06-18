@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <classPathEntry location="./mysql-connector-java-5.0.8-bin.jar" />
+    <classPathEntry location="/Users/mengbo/IdeaProjects/home-cooking/src/main/resources/dao/mysql-connector-java-5.0.8-bin.jar" />
 
     <context id="mysqlTables" targetRuntime="MyBatis3">
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -14,13 +14,17 @@
         </jdbcConnection>
 
 
-        <javaModelGenerator targetPackage="dbgirl.homecooking.pojo" targetProject="../../../src/main/java">
+        <javaModelGenerator targetPackage="dbgirl.homecooking.pojo" targetProject="/Users/mengbo/IdeaProjects/home-cooking/src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
+        <sqlMapGenerator targetPackage="dao.mapper"
+                         targetProject="/Users/mengbo/IdeaProjects/home-cooking/src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
 
-        <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="dbgirl.homecooking.dao"  targetProject="../../../src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="dbgirl.homecooking.dao"  targetProject="/Users/mengbo/IdeaProjects/home-cooking/src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
