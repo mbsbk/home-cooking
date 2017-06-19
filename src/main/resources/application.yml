@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: home-cooking
@@ -17,7 +18,7 @@ spring:
     testOnBorrow: false
     testOnReturn: false
 
-
 mybatis:
   mapperLocations: classpath*:dao/mapper/*Mapper.xml
-
+logging:
+  config: classpath:logback-dev.xml
