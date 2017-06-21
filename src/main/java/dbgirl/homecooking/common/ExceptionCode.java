@@ -3,15 +3,15 @@ package dbgirl.homecooking.common;
 /**
  * Created by mengbo on 2017/6/19.
  */
-public enum ErrorCode {
+public enum ExceptionCode {
 
-    UNKNOWN(-1, "unknow");
+    UNKNOWN(-1, "unknown");
 
 
     private int code;
     private String msg;
 
-    ErrorCode(int code, String msg) {
+    ExceptionCode(int code, String msg) {
         this.code = code;
         this.msg = msg;
     }
