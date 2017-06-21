@@ -1,8 +1,8 @@
 package dbgirl.homecooking.core.recommendation.service;
 
+import dbgirl.homecooking.common.exception.RecommendException;
 import dbgirl.homecooking.core.recommendation.IRecommenderService;
 import dbgirl.homecooking.dao.BookMapper;
-import dbgirl.homecooking.exception.RecommendException;
 import dbgirl.homecooking.pojo.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;

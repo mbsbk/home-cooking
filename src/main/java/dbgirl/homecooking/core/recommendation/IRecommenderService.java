@@ -1,6 +1,6 @@
 package dbgirl.homecooking.core.recommendation;
 
-import dbgirl.homecooking.exception.RecommendException;
+import dbgirl.homecooking.common.exception.RecommendException;
 import dbgirl.homecooking.pojo.Book;
 
 /**

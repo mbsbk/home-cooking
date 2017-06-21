@@ -1,4 +1,4 @@
-package dbgirl.homecooking.exception;
+package dbgirl.homecooking.common.exception;
 
 /**
  * Created by mengbo on 2017/6/19.
