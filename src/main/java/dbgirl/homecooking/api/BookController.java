@@ -1,6 +1,6 @@
 package dbgirl.homecooking.api;
 
-import dbgirl.homecooking.common.ResponseCode;
+import dbgirl.homecooking.common.Response;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
@@ -19,12 +19,12 @@ public class BookController {
             value = "add book", notes = "add book"
     )
     @RequestMapping(value = "/{name}/add", method = {RequestMethod.GET,RequestMethod.POST}, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseCode addBook(@PathVariable("name") String name) {
+    public Response addBook(@PathVariable("name") String name) {
 
         //TODO
 
 
-        return ResponseCode.success();
+        return Response.success();
     }
 
 }
