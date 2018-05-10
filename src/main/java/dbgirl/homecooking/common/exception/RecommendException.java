@@ -4,8 +4,6 @@ package dbgirl.homecooking.common.exception;
  * Created by mengbo on 2017/6/19.
  */
 
-import dbgirl.homecooking.common.ExceptionCode;
-
 
 public class RecommendException extends RuntimeException {
 

@@ -1,12 +1,12 @@
-package dbgirl.homecooking.common;
+package dbgirl.homecooking.common.exception;
 
 /**
  * Created by mengbo on 2017/6/19.
  */
 public enum ExceptionCode {
 
-    UNKNOWN(-1, "unknown");
-
+    UNKNOWN(-1, "unknown"),
+    ILLEGAL_PARAMETER(1,"illegal parameter");
 
     private int code;
     private String msg;
