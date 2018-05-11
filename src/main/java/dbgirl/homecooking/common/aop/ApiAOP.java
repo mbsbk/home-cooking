@@ -11,7 +11,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Map;
 
 /**
@@ -37,15 +42,8 @@ public class ApiAOP {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         String method = request.getMethod();
         String requestURI = request.getRequestURI();
-        Map<String, String[]> parameterMap = request.getParameterMap();
-        String params = "";
-        try {
-            params = new ObjectMapper().writeValueAsString(parameterMap);
-        } catch (JsonProcessingException e) {
-            logger.error(e.getMessage(), e);
-        }
-
-        logger.info(method + " " + requestURI + " params: " + params);
+        //TODO 获取请求参数，ajax json post时无法获取参数
+        logger.info(method + " " + requestURI);
 
     }
 
@@ -65,4 +63,7 @@ public class ApiAOP {
     public void after(JoinPoint joinPoint, Throwable ex) {
         logger.info("exception " + ex.getMessage());
     }
+
+
+
 }

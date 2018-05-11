@@ -6,8 +6,8 @@ package dbgirl.homecooking.common.exception;
 public enum ExceptionCode {
 
     UNKNOWN(-1, "unknown"),
-    ILLEGAL_PARAMETER(1,"illegal parameter");
-
+    ILLEGAL_PARAMETER(1,"illegal parameter"),
+    WX_AUTHORIZATION_FAILED(2,"微信授权失败");
     private int code;
     private String msg;
 
